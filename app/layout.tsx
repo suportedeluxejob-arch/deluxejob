@@ -27,7 +27,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "DeLuxe Job",
   description: "Plataforma premium de conteúdo exclusivo",
-  generator: "v0.app",
+  generator: "Anoxqui",
   manifest: "/manifest.json",
   themeColor: "#ec4899",
   appleWebApp: {
