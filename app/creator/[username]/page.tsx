@@ -307,7 +307,7 @@ export default function CreatorProfilePage() {
   const handleLike = async (postId: string) => {
     if (!user) {
       showWarning("Cadastro necessário", "Crie sua conta grátis para curtir posts e interagir com criadoras!")
-      setTimeout(() => router.push("/signup"), 2000)
+      setTimeout(() => router.push("/?mode=signup"), 2000)
       return
     }
 
@@ -348,7 +348,7 @@ export default function CreatorProfilePage() {
   const handleComment = (postId: string) => {
     if (!user) {
       showWarning("Cadastro necessário", "Crie sua conta grátis para comentar e conversar com criadoras!")
-      setTimeout(() => router.push("/signup"), 2000)
+      setTimeout(() => router.push("/?mode=signup"), 2000)
       return
     }
 
@@ -378,7 +378,7 @@ export default function CreatorProfilePage() {
   const handleShare = async (postId: string) => {
     if (!user) {
       showWarning("Cadastro necessário", "Crie sua conta grátis para retuitar posts!")
-      setTimeout(() => router.push("/signup"), 2000)
+      setTimeout(() => router.push("/?mode=signup"), 2000)
       return
     }
 
@@ -608,14 +608,14 @@ export default function CreatorProfilePage() {
                   size="sm"
                   variant="outline"
                   className="rounded-full text-xs px-4 py-1.5 h-8 bg-white/10 hover:bg-white/20 text-white border-white/30"
-                  onClick={() => router.push("/login")}
+                  onClick={() => router.push("/?mode=login")}
                 >
                   Entrar
                 </Button>
                 <Button
                   size="sm"
                   className="rounded-full bg-white hover:bg-white/90 text-primary text-xs px-4 py-1.5 h-8 font-semibold shadow-lg"
-                  onClick={() => router.push("/signup")}
+                  onClick={() => router.push("/?mode=signup")}
                 >
                   Cadastrar Grátis
                 </Button>
@@ -1326,7 +1326,7 @@ export default function CreatorProfilePage() {
                   <Button
                     size="lg"
                     className="w-full rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg h-12"
-                    onClick={() => router.push("/signup")}
+                    onClick={() => router.push("/?mode=signup")}
                   >
                     Criar Conta Grátis
                   </Button>
@@ -1334,7 +1334,7 @@ export default function CreatorProfilePage() {
                     size="lg"
                     variant="outline"
                     className="w-full rounded-xl font-medium h-12 bg-transparent"
-                    onClick={() => router.push("/login")}
+                    onClick={() => router.push("/?mode=login")}
                   >
                     Já tenho conta
                   </Button>

@@ -29,6 +29,15 @@ export default function AuthPage() {
   const searchParams = useSearchParams()
 
   useEffect(() => {
+    const mode = searchParams.get("mode")
+    if (mode === "signup") {
+      setIsLogin(false)
+    } else if (mode === "login") {
+      setIsLogin(true)
+    }
+  }, [searchParams])
+
+  useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
       if (!event.key) return
 
